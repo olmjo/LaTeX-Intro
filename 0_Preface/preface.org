@@ -1,0 +1,34 @@
+* Outline of LaTeX Instruction
+** Preface
+
+** The Workflow
+*** Text Files
+**** How do we create them?
+***** Emacs
+***** Notepad
+***** WinEdt
+
+**** What goes in them?
+***** Structure
+***** Content
+
+*** Miscellaneous Inputs
+**** Other Text Files
+**** Bibliographic Information
+**** Image Files
+
+*** The Latex System
+**** Components
+**** Different Systems
+***** TexLive
+***** MikTeX
+
+*** Output
+
+  
+** The Structure of a LaTeX Document
+
+** The Content of a LaTeX Document
+
+** Miscellaneous Inputs
+

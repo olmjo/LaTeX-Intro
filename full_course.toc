@@ -1,0 +1,44 @@
+\contentsline {paragraph}{About.}{1}{section*.3}
+\contentsline {paragraph}{Rights.}{1}{section*.4}
+\contentsline {paragraph}{Comments.}{1}{section*.5}
+\contentsline {part}{I\hspace {1em}An Introduction to Using \LaTeX {}}{2}{part.1}
+\contentsline {section}{\numberline {1}What is \LaTeX {} (lay-teck) or LaTeX, but not latex or Latex?}{2}{section.1}
+\contentsline {section}{\numberline {2}Why Would You Use \LaTeX {}?}{2}{section.2}
+\contentsline {section}{\numberline {3}How Does \LaTeX {} Work?}{3}{section.3}
+\contentsline {paragraph}{Step 2}{3}{section*.6}
+\contentsline {paragraph}{Step 3}{3}{section*.7}
+\contentsline {paragraph}{Step 4}{4}{section*.8}
+\contentsline {paragraph}{Step 5}{4}{section*.9}
+\contentsline {paragraph}{Step 6}{4}{section*.10}
+\contentsline {section}{\numberline {4}A Simple Task}{4}{section.4}
+\contentsline {part}{II\hspace {1em}Basic Content in LaTeX{}}{5}{part.2}
+\contentsline {section}{\numberline {5}\LaTeX 's Interpretation of Plain Text}{5}{section.5}
+\contentsline {section}{\numberline {6}\texttt {.tex} Input File Structure}{7}{section.6}
+\contentsline {section}{\numberline {7}Output File Structure}{8}{section.7}
+\contentsline {section}{\numberline {8}Environments}{8}{section.8}
+\contentsline {section}{\numberline {9}Error Debugging}{9}{section.9}
+\contentsline {section}{\numberline {10}Solving Problems and Getting Help}{9}{section.10}
+\contentsline {part}{III\hspace {1em}Creating Full Documents in \LaTeX }{10}{part.3}
+\contentsline {section}{\numberline {11}Starting Point}{10}{section.11}
+\contentsline {section}{\numberline {12}Fonts}{11}{section.12}
+\contentsline {section}{\numberline {13}List Environments}{12}{section.13}
+\contentsline {section}{\numberline {14}Metadata: titles, dates, authors, abstracts}{13}{section.14}
+\contentsline {section}{\numberline {15}Fancy (and not Fancy) Headers}{14}{section.15}
+\contentsline {part}{IV\hspace {1em}Including Mathematics in \LaTeX {} Documents}{16}{part.4}
+\contentsline {section}{\numberline {16}Additional Packages}{16}{section.16}
+\contentsline {section}{\numberline {17}Math Modes}{16}{section.17}
+\contentsline {subparagraph}{In-line}{17}{section*.21}
+\contentsline {subparagraph}{Display}{17}{section*.22}
+\contentsline {section}{\numberline {18}Superscripts and Subscripts}{18}{section.18}
+\contentsline {section}{\numberline {19}Operators}{18}{section.19}
+\contentsline {section}{\numberline {20}Greek Letters}{19}{section.20}
+\contentsline {section}{\numberline {21}Other Letter-y Things}{19}{section.21}
+\contentsline {section}{\numberline {22}Special Text-like Mathematical Expressions}{20}{section.22}
+\contentsline {section}{\numberline {23}Delimiters}{20}{section.23}
+\contentsline {section}{\numberline {24}Accents}{20}{section.24}
+\contentsline {section}{\numberline {25}Assignment!}{21}{section.25}
+\contentsline {part}{V\hspace {1em}\LaTeX {} Miscellany}{23}{part.5}
+\contentsline {section}{\numberline {26}Tables}{23}{section.26}
+\contentsline {section}{\numberline {27}Pictures}{24}{section.27}
+\contentsline {section}{\numberline {28}Floats}{25}{section.28}
+\contentsline {section}{\numberline {29}Words of Wisdom}{29}{section.29}

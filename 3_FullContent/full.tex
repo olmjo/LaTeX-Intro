@@ -1,0 +1,293 @@
+\part{Creating Full Documents in \LaTeX}
+\section{Starting Point}
+\begin{itemize}
+\item This tutorial builds off of the previous one which introduced
+  \LaTeX~commands.
+\item By the end of the last tutorial we had working documents with
+  environments and headings that were quite pleasing to the eye.
+\item We will quickly create a very basic document to pick up where we
+  left off.
+\item Open WinEdt and create a new \LaTeX~\texttt{*.tex} file where
+  you would like it.
+\item Create a basic document with the following code and check that
+  it compiles.
+  
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+\documentclass{article}
+
+% This is just a comment.
+\begin{document}
+
+\section{The Content}
+
+\subsection{Short Content}
+
+\subsection{Long Content}
+
+\appendix
+
+\section{Some Book-keeping}
+
+\end{document}
+\end{verbatim}
+    \end{minipage}
+  }
+\item Go ahead and download the two dummy text files from
+  \url{www.rochester.edu/college/gradstudents/jolmsted/teaching/LaTeX/}. Place
+  these two files inside the same directory as your new
+  \LaTeX~\texttt{.tex} file.
+\item As it stands, our compiled document is quite bare. Add the
+  following \LaTeX~commands:
+  \begin{itemize}
+  \item Add \texttt{\textbackslash input\{./loremipsum\_short.txt\}}
+    on a new line directly after \texttt{\textbackslash section\{Short
+      Content\}}. As long as the downloaded file was placed in the
+    appropriate place, you can safely ignore what this command does.
+  \item Add \texttt{\textbackslash input\{./loremipsum.txt\}} on a new
+    line directly after \texttt{\textbackslash
+      section\{Long~Content\}}. Enter this line, again, on a new
+    line. As long as the downloaded file was placed in the appropriate
+    place, you can safely ignore what this command does.
+  \end{itemize}
+\item Compile this document again.
+\end{itemize}
+
+\section{Fonts}
+In \LaTeX~we can make some very basic changes to the font in with
+ease. These changes can be made with one of two approaches. The
+\textit{environment} approach or the \textit{command} approach. In the
+first, whatever font we change will be inside an environment. In the
+second, whatever font we change will be the mandatory argument to a
+command.
+
+\subsection*{Font Styles}
+When consider \textbf{bold face} or \textsc{Small Caps}, we are
+changing font styles. The basic and most common changes are here:
+\begin{small}
+\begin{center}
+  \begin{tabular}{c c c}
+    \hline
+    Style               & Environment                                                                          & Command \\
+    \hline
+    normal/default      & \texttt{\textbackslash begin\{textnormal\} \ldots \textbackslash end\{textnormal\}}  & \texttt{\textbackslash textnormal\{\ldots \}}\\
+   \textbf{bold}        & \texttt{\textbackslash begin\{bf\} \ldots \textbackslash end\{bf\}}  & \texttt{\textbackslash textbf\{\ldots \}}\\
+   \textit{italics}     & \texttt{\textbackslash begin\{it\} \ldots \textbackslash end\{it\}}  & \texttt{\textbackslash textit\{\ldots \}}\\
+   \textsc{SmallCaps}   & \texttt{\textbackslash begin\{sc\} \ldots \textbackslash end\{sc\}}  & \texttt{\textbackslash textsc\{\ldots \}}\\
+   \underline{underline}&                                      :-(                             & \texttt{\textbackslash underline\{\ldots \}}\\
+   \textrm{Roman}       & \texttt{\textbackslash begin\{textrm\} \ldots \textbackslash end\{textrm\}}  & \texttt{\textbackslash textrm\{\ldots \}}\\
+   \textsf{Sans Serif}  & \texttt{\textbackslash begin\{textsf\} \ldots \textbackslash end\{textsf\}}  & \texttt{\textbackslash textsf\{\ldots \}}\\
+   \texttt{teletype}    & \texttt{\textbackslash begin\{tt\} \ldots \textbackslash end\{tt\}}  & \texttt{\textbackslash texttt\{\ldots \}}\\
+   \hline
+  \end{tabular}
+\end{center}
+\end{small}
+\begin{itemize}
+\item Place the \texttt{\textbackslash input} command under the ``Short Content''
+  section inside a font style environment of your choice. Compile the
+  document.
+\item Before this environment, but under the ``Short Content'' section
+  type and complete the following sentence: ``If I had a boat, I'd \ldots''.
+\item Change the style of the font for that sentence and only that
+  sentence by using the command approach. This time, choose a
+  different style from the environment change you made above.
+\end{itemize}
+
+
+
+\subsection*{Sizes}
+
+\begin{small}
+\begin{center}
+  \begin{tabular}{c c c}
+    \hline
+    Style               & Environment                                                                 & Command \\
+    \hline
+    \tiny{tiny}         & \texttt{\textbackslash begin\{tiny\} \ldots \textbackslash end\{tiny\}}      & \texttt{\textbackslash tiny\{\ldots\}}\\
+    \scriptsize{scriptsize} & \texttt{\textbackslash begin\{scriptsize\} \ldots \textbackslash end\{scriptsize\}}      & \texttt{\textbackslash scriptsize\{\ldots\}}\\
+    \footnotesize{footnotesize} & \texttt{\textbackslash begin\{footnotesize\} \ldots \textbackslash end\{footnotesize\}}      & \texttt{\textbackslash footnotesize\{\ldots\}}\\
+    \small{small} & \texttt{\textbackslash begin\{small\} \ldots \textbackslash end\{small\}}      & \texttt{\textbackslash small\{\ldots\}}\\
+    \normalsize{normalsize} & \texttt{\textbackslash begin\{normalsize\} \ldots \textbackslash end\{normalsize\}}      & \texttt{\textbackslash normalsize\{\ldots\}}\\
+    \large{large} & \texttt{\textbackslash begin\{large\} \ldots \textbackslash end\{large\}}      & \texttt{\textbackslash large\{\ldots\}}\\
+    \Large{Large} & \texttt{\textbackslash begin\{Large\} \ldots \textbackslash end\{Large\}}      & \texttt{\textbackslash Large\{\ldots\}}\\
+    \LARGE{LARGE} & \texttt{\textbackslash begin\{LARGE\} \ldots \textbackslash end\{LARGE\}}      & \texttt{\textbackslash LARGE\{\ldots\}}\\
+    \huge{huge} & \texttt{\textbackslash begin\{huge\} \ldots \textbackslash end\{huge\}}      & \texttt{\textbackslash huge\{\ldots\}}\\
+    \Huge{Huge} & \texttt{\textbackslash begin\{Huge\} \ldots \textbackslash end\{Huge\}}      & \texttt{\textbackslash Huge\{\ldots\}}\\
+    \hline
+  \end{tabular}
+\end{center}
+\end{small}
+
+\begin{itemize}
+\item Place the \texttt{\textbackslash input} under the ``Long
+  Content'' inside a font size environment of your choice, but choose
+  a size that is small than the normal size. Compile your document.
+\end{itemize}
+
+\section{List Environments}
+There are three main list environments that you will use:
+\texttt{itemize}, \texttt{enumerate}, and \texttt{description}.
+
+\begin{description}
+\item[\texttt{itemize}] The \texttt{itemize} environment allows you to
+  make bullet-ed lists without conveying any order. These can be
+  nested to create any structure desired. However, complex nesting
+  often results in user-mistakes.
+\item[\texttt{enumerate}] The \texttt{enumerate} environment allows
+  you to make numbered lists which convey a precise order. The number
+  is automatic. These can be nested to create any structure desired
+  and the ``numbering'' system used at each level reflects how far in
+  the tree the entry is.
+\item[\texttt{description}] The \texttt{description} environment is
+  slightly different. In fact, I am using it here. Instead of each
+  entry being marked with an automatic bullet or number, the user must
+  provide the ``term'' being described.
+\end{description}
+
+\begin{itemize}
+\item For either \texttt{itemize} or \texttt{enumerate} your code
+  looks like this, where ``\texttt{environment}'' is swapped out for
+  the correct environment:
+
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+\begin{environment}
+\item An item
+\item Another item
+\item Still more items!
+\end{environment}
+\end{verbatim}
+    \end{minipage}
+  }  
+
+
+\item For the \texttt{description} environment your code is slightly
+  different:
+
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+\begin{description}
+\item[An item] description 1
+\item[Another item] description 2
+\item[Still more items!] description 3
+\end{description}
+\end{verbatim}
+    \end{minipage}
+  }  
+
+\item Create a list in the ``Some Book-keeping'' section. In this list
+  you should have two items---two of your favorite books. If you are
+  using the \texttt{description} environment include the author's name
+  as the description if you know it. In this case, make sure the book
+  title is in square brackets.
+\end{itemize}
+
+\section{Metadata: titles, dates, authors, abstracts}
+\subsection*{\texttt{\textbackslash maketitle}}
+\begin{itemize}
+\item Although our content is already impressively long, the document
+  is lacking all metadata. To address this we will formally introduce
+  the \texttt{\textbackslash maketitle} command
+\item In the preamble of the file (that is, before
+  \texttt{\textbackslash begin\{document\}}, but after
+  \texttt{\textbackslash documentclass}), enter the following code:
+
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+\title{My First Opus}
+\date{\today}
+\author{Kevin Clarke}
+\end{verbatim}
+    \end{minipage}
+  }
+\item Compile the document. Does anything change?
+\item Now, add \texttt{\textbackslash maketitle} directly after
+  \texttt{\textbackslash begin\{document\}}, but on a new line.
+\item Compile again.
+\item Comment out the line with the \texttt{\textbackslash date}
+  directive. Re-compile. What happens?
+\item Uncomment that same line, delete the directive's single
+  mandatory argument and compile. What happens?
+\item In order to use the \texttt{\textbackslash maketitle} command, a
+  title must be defined. The author and date, however are optional.
+\end{itemize}
+
+\subsection*{\texttt{\textbackslash thanks}}
+\begin{itemize}
+\item Kevin is a humble man and acknowledges the contribution that
+  non-Kevin entities play in his success. To add this to the title we
+  use \texttt{\textbackslash thanks}.
+\item Include the following line at the end of ``Clarke'' within the
+  author directive as part of the mandatory
+  argument: \texttt{\textbackslash thanks\{The author thanks Rochester
+    winters for being sufficiently ridiculous that everyone is forced
+    to stay inside and work.\}}
+\item You can use \texttt{thanks} to include institution information
+  or contact information, too.
+\end{itemize}
+
+
+
+\subsection*{\texttt{titlepage}}
+\begin{itemize}
+\item Because this opus is so substantial, it can be overwhelming to
+  assault the reader with content on the first page. In this case,
+  we'd like to have just a title page.
+\item Place the \texttt{\textbackslash maketitle} directive in an
+  environment by the name of \texttt{titlepage}
+\end{itemize}
+
+\subsection*{\texttt{abstract}}
+\begin{itemize}
+\item Even with a title, we might want to convey the content of our
+  document in more detail.
+\item In this case, we'd use an abstract.
+\item After \texttt{\textbackslash maketitle} but within the
+  \texttt{titlepage} environment, create a new environment (which is
+  completely nested) called \texttt{abstract}. Within the
+  \texttt{abstract} environment, write two sentences about what we
+  have covered in this tutorial, so far. Include the word \LaTeX,
+  properly typeset.
+\item Compile the document.
+\end{itemize}
+
+\section{Fancy (and not Fancy) Headers}
+
+\begin{itemize}
+\item By default, the only content in the header or footer of our
+  document is the page number.
+\item We can change this by using a package called \texttt{fancyhdr}.
+\item Tell \LaTeX~ to use this package? What is the command? Where
+  does it go?
+\item In the header, also include \texttt{\textbackslash
+    pagestyle\{plain\}}. Compile the document. What changes?
+\item Now use \texttt{\textbackslash pagestyle\{fancy\}},
+  instead. Compile the document. What changes?
+\item You can change the contents of the headers and footers by using
+  commands of the form \texttt{\textbackslash rfoot\{\}} for
+  \texttt{r}, \texttt{l}, and \texttt{c}; and for \texttt{foot} and
+  \texttt{head}.
+\item Place the state or non-US country in which you were born
+  somewhere in the footer. Compile the document.
+\item Notice that the first page, the title page, has no header. Even
+  when we use fancy headers and get the pretty content on that first
+  inch of the page, any page with \texttt{\textbackslash maketitle} is
+  unchanged, by default. We can change this by including
+  \texttt{\textbackslash thispagestyle\{fancy\}} immediately after
+  \texttt{\textbackslash maketitle}.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

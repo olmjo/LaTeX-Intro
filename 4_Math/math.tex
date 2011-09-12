@@ -1,0 +1,444 @@
+\part{Including Mathematics in \LaTeX{} Documents}
+
+\section{Additional Packages}
+
+\begin{itemize}
+
+\item In order to avoid a lot of redundant and complicated code, it is
+  helpful to load two particular packages each time you create a
+  document with mathematics in it.
+
+\item A bare-bones document requires only a \texttt{\textbackslash
+    documentclass\{\}} line, followed by the \texttt{\textbackslash
+    begin\{document\}} and \texttt{\textbackslash
+    end\{document\}} lines.
+
+\item We will now add \texttt{\textbackslash usepackage\{amsmath,
+    amsthm, amssym, amsfonts\}} to the \textit{preamble} of the
+  document. This tells \LaTeX{} to recognize certain commands defined
+  in these packages.
+
+\item We'll never use most of the functionality they add, but we'll
+  often use some of it!
+
+\item Create the following empty \LaTeX{} document in WinEdt in which
+  we'll practice mathematical commands.
+
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+\documentclass{article}
+
+\usepackages{amsmath, amsthm, amssymb, amsfonts}
+
+% This is just a comment.
+
+\begin{document}
+
+\end{document}
+\end{verbatim}
+    \end{minipage}
+  }
+
+\end{itemize}
+
+\section{Math Modes}
+
+\begin{itemize}
+  
+\item In order to display mathematical content in \LaTeX{}, we will use a
+  new set of commands that we wouldn't need for, say, writing a
+  letter. However, \LaTeX{} doesn't allow you to issue these commands
+  just anywhere. 
+
+\item Rather, you need to be either in math mode or in a
+  mathematical \textit{environment} where the math mode is implied.
+
+\item There are two math modes which don't utilize special
+  \textit{environments}: \textit{in-line} math and \textit{display
+    math}.
+
+\item These two are analogous to the way we include quotes in our own
+  written work. \subparagraph{In-line} Sometimes the quotes are
+  treated like any other text and printed in the same sized font
+  without any special indentation. \subparagraph{Display} Sometimes
+  the quotes begin on new lines, are indented, and quite distinct from
+  the other text.
+
+\item As a note, some commands and characters can only be entered in
+  math mode. However, many, like the word ``computer'' can be entered
+  in normal mode and math mode. Yet, if you think ``computer'' is
+  different from ``$computer$'', then you must beware which mode you
+  use.
+
+\item After this section, it will be assumed that all math command
+  sequence are typed in math mode. Otherwise, they will almost always
+  fail. The math mode openings and closings are omitted.
+  
+\end{itemize}
+
+\subsection*{In-line Math}
+\begin{itemize}
+\item The \textit{in-line} math mode is opened by typing a single
+  dollar sign (\texttt{\$}) and then closed by typing a single dollar
+  sign.
+\item The content is placed in between the two \texttt{\$} symbols.
+\item When we type \texttt{\$55/i = \textbackslash pi\^{}\{-0.3\}\$},
+  we get $55/i = \pi^{-0.3}$. Any lines immediately following the
+  in-line text are entirely unaffected, including this one. And
+  this one, too.
+\end{itemize}
+
+\subsection*{Display Math}
+\begin{itemize}
+\item The \textit{display} math mode is opened by typing
+  \texttt{\textbackslash [} and closed by typing
+  \texttt{\textbackslash ]}. Another approach is to use double dollar
+  signs as in the in-line mode (\texttt{\$\$ \ldots \$\$}). However,
+  the square bracket approach is considered ``better''.
+
+\item Again, the content to be displayed in the math mode is placed
+  between the opening and closing key sequences.
+\item Now, when we type \texttt{\textbackslash [55/i = \textbackslash
+    pi\^{}\{-0.3\}\textbackslash ]}, we get
+  \[
+  55/i = \pi^{-0.3},
+  \]
+  which is the same as when we type \texttt{\$\$55/i = \textbackslash
+    pi\^{}\{-0.3\}\$\$} and we get
+  $$
+  55/i = \pi^{-0.3}.
+  $$
+\item Clearly the appearance of the \textit{display} math is different
+  from the \textit{in-line} math. However, sometimes the differences
+  go beyond indentation and size. Both $\int_{0}^{\infty}
+  \sum_{n=1}^{\infty} \frac{1}{n}~dx$ and 
+\[
+\int_{0}^{\infty} \sum_{n=1}^{\infty} \frac{1}{n}~dx
+\]
+have the same math mode code, but they are placed in the two different
+modes. In this examples, the limits of integration are the most
+obvious difference in how these expressions are rendered.
+\end{itemize}
+
+\section{Superscripts and Subscripts}
+\begin{itemize}
+\item To add a superscript to an expression use a hat,
+  ``\texttt{\^{}}'', after the term with the exponent. So,
+  \texttt{X\^{}3} gives $X^3$.
+
+\item If your exponent has more than one character to be rendered in
+  the case of $X^{3+y}$, then we must surround the entire exponent in
+  \textit{curly braces} (\texttt{\{ \}}). For this previous expression
+  we'd type \texttt{X\^{}\{3+y\}}. In this sense, the
+  \textit{curly braces} group terms. When in doubt, use curly braces
+  to set the scope of your exponent. Had we omitted the curly braces,
+  we'd see $X^3+y$ which is quite different.
+
+\item The principle for subscripting is identical, but we use the
+  underscore, ``\texttt{\_}'', instead. Typing
+  \texttt{X\_{}\{3+y\}} gives $X_{3 + y}$.
+
+\item Super-- and subscripting can be recursive. However, one must be
+  very careful with braces in this case. We can typeset $e^{x_{i}}$
+  with \texttt{e\^{}\{x\_\{i\}\}}. Now, the braces around the
+  \texttt{i} term are optional. Remove them, what happens to the
+  rendering? Remove the braces around the $x_i$ term. Compile the
+  document. What happens to the rendering?
+
+\item Both superscripts and subscripts can be used simultaneously. In
+  Social Choice, we often care about the median voter's preference,
+  denoted $x_i^m$. This can be achieved with either
+  \texttt{x\_i\^{}m} or \texttt{x\_\{i\}\^{}\{m\}}. The latter
+  is more typing, but forces you to be explicit about the scope which
+  tends to reduce the number of errors.
+
+\end{itemize}
+
+\section{Operators}
+
+\begin{multicols}{3}
+\begin{itemize}
+\item[$+$] \texttt{+}
+\item[$=$] \texttt{=}
+\item[$-$] \texttt{-}
+\item[$/$] \texttt{/}
+\item[$<$] \texttt{<}
+\item[$>$] \texttt{>}
+\item[$\leq$] \texttt{\textbackslash leq}
+\item[$\geq $] \texttt{\textbackslash geq}
+\item[$\vee$] \texttt{\textbackslash vee}
+\item[$\wedge$] \texttt{\textbackslash wedge}
+\item[$\bigvee$] \texttt{\textbackslash bigvee}
+\item[$\bigwedge$] \texttt{\textbackslash bigwedge}
+\item[$\cup$] \texttt{\textbackslash cup}
+\item[$\cap$] \texttt{\textbackslash cap}
+\item[$\bigcup$] \texttt{\textbackslash bigcup}
+\item[$\bigcap$] \texttt{\textbackslash bigcap}
+\item[$\forall$] \texttt{\textbackslash forall}
+\item[$\exists$] \texttt{\textbackslash exists}
+\item[$\subset$] \texttt{\textbackslash subset}
+\item[$\subseteq$] \texttt{\textbackslash subseteq}
+\item[$\subsetneq$] \texttt{\textbackslash subsetneq}
+\item[$\supset$] \texttt{\textbackslash supset}
+\item[$\supseteq$] \texttt{\textbackslash supseteq}
+\item[$\supsetneq$] \texttt{\textbackslash supsetneq}
+\item[$\int$] \texttt{\textbackslash int}
+\item[$\sum$] \texttt{\textbackslash sum}
+\item[$\prod$] \texttt{\textbackslash prod}
+\item[$\partial$] \texttt{\textbackslash partial}
+\item[$\sim$] \texttt{\textbackslash sim}
+\item[$\approx$] \texttt{\textbackslash approx}
+\item[$\Leftrightarrow$] \texttt{\textbackslash Leftrightarrow}
+\item[$\leftrightarrow$] \texttt{\textbackslash leftrightarrow}
+\item[$\Leftarrow$] \texttt{\textbackslash Leftarrow}
+\item[$\leftarrow$] \texttt{\textbackslash leftrightarrow}
+\item[$\Rightarrow$] \texttt{\textbackslash Rightarrow}
+\item[$\rightarrow$] \texttt{\textbackslash rightarrow}
+\item[$\not ~$] \texttt{\textbackslash not}
+\item[$\neg$] \texttt{\textbackslash neg}
+\item[$\div$] \texttt{\textbackslash div}
+\item[$\infty$] \texttt{\textbackslash infty}
+\item[$\emptyset$] \texttt{\textbackslash emptyset}
+\item[$\in$] \texttt{\textbackslash in}
+\end{itemize}
+\end{multicols}
+
+\section{Greek Letters}
+
+\begin{itemize}
+\item Greek letters are uncomfortably common in the work we do, so you
+  will get used to including them in your documents.
+
+\item Although there are neither $\zeta$ nor $\chi$ keys on your
+  keyboard, we can include these symbols in the math environment in a
+  very intuitive way. Type \texttt{\textbackslash name-of-letter}
+  or \texttt{\textbackslash Name-of-letter} for the lower-case and
+  upper-case version of the Greek letter.
+
+\item So, \texttt{\textbackslash delta} and \texttt{\textbackslash
+    Delta} give $\delta$ and $\Delta$, respectively.
+
+\item Not every letter has a special upper-case version
+  provided. Although \texttt{\textbackslash beta} gives $\beta$
+  \texttt{\textbackslash Beta} is undefined.
+
+\item Not every letter has a special character, regardless of
+  case. For example, the Greek omicron is just like the Roman `o', so
+  \texttt{o} gives $o$ which will be sufficient.
+
+\item With Greek letters a particular issue arises often, although it
+  isn't specific to Greek letters. \LaTeX{} commands do not need a
+  leading space before the \texttt{\textbackslash}. Yet, they do need
+  a trailing space so that \LaTeX{} knows the name of the command is
+  over. So, \texttt{X\textbackslash beta} ($X\beta$) is rendered
+  identically to \texttt{X~\textbackslash beta} ($X \beta$)
+  because \LaTeX{} has its own way of interpreting
+  whitespace. However, \texttt{X\textbackslash beta + \textbackslash
+    epsilon} ($X\beta + \epsilon$) works whereas
+  \texttt{X~\textbackslash beta+ \textbackslash epsilon} will not
+  because \texttt{\textbackslash beta+} is an undefined control
+  sequence (i.e. we just made up that command).
+
+\end{itemize}
+\section{Other Letter-y Things}
+
+Sometimes we need to present change the presentation of standard
+letters or symbols in math mode. Here are several common examples. The
+way these work is that whatever symbols are to have their face changed
+are passed to these commands as arguments. Notice how the ``math''
+faces remove white space
+
+\begin{tabular}{c c c c}
+  \hline \hline
+  Modification & Command & Example & Common Uses\\
+  \hline
+  Normal Math Face & ---& $ABC XY$ & most maths\\
+  Roman Face & \texttt{\textbackslash textrm\{\}} &  $\textrm{ABC XY}$& text within equation\\
+  Bold Math Face & \texttt{\textbackslash mathbf\{\}} &  $\mathbf{ABC XY}$ & vectors and matrices\\
+  Blackboard Math & \texttt{\textbackslash mathbb\{\}} &  $\mathbb{ABC XY}$ & special sets of numbers\\
+  Calligraphic Math & \texttt{\textbackslash mathcal\{\}} & $\mathcal{ABC XY}$& arbitrary sets\\
+  \hline \hline
+\end{tabular}
+
+\section{Special Text-like Mathematical Expressions}
+
+Certain functions, operators, and constructs pop up in math frequently
+which are basically abbreviates for words. The cosine function---as in
+$\cos(\pi)=1$---and the limit of an expression---as in $\lim_{x
+  \rightarrow \infty} \frac{1}{x}$---are two such examples. If we just
+typed \texttt{\$cos\$} ($cos$) or \texttt{\$lim\$} ($lim$) we get
+results quite different. An incomplete list of the expressions for
+which the control sequences are defined is below.
+
+\begin{multicols}{4}
+\begin{itemize}
+\item[$\det$] \texttt{\textbackslash det}
+\item[$\lim$] \texttt{\textbackslash lim}
+\item[$\max$] \texttt{\textbackslash max}
+\item[$\min$] \texttt{\textbackslash min}
+\item[$\inf$] \texttt{\textbackslash inf}
+\item[$\sup$] \texttt{\textbackslash sup}
+\item[$\cos$] \texttt{\textbackslash cos}
+\item[$\sin$] \texttt{\textbackslash sin}
+\item[$\tan$] \texttt{\textbackslash tan}
+\item[$\exp$] \texttt{\textbackslash exp}
+\item[$\Pr$] \texttt{\textbackslash Pr}
+\item[$\arg$] \texttt{\textbackslash arg}
+\end{itemize}
+\end{multicols}
+
+\section{Delimiters}
+Many times, we need to express groupings through the use of
+delimiters. For example, $(100 - 100)^{100}$ is quite different than
+$100 - 100^{100}$. For parentheses we can just enter \texttt{(x)}. For
+curly braces we enter \texttt{\{x\}}. And, lastly, for square brackets
+we use \texttt{[x]}. These produce $(x)$, $\{x\}$, and $[x]$,
+respectively. In longer expressions, though, the results can look
+funny.
+In
+\[
+[\sum_{x=1}^{3} \{ (\int_{0}^{x} (e^{y}~dy))\}],
+\]
+the size of the delimiters is off. However, in
+\[
+\left[\sum_{x=1}^{3} \left\{ \left(\int_{0}^{x} (e^{y}~dy)\right)\right\}\right],
+\]
+the problems seem to be gone. If we type \texttt{\textbackslash
+  left(}, \texttt{\textbackslash left\textbackslash\{}, or
+\texttt{\textbackslash left[} and close the expression off with the
+approprate \texttt{\textbackslash right)}, \texttt{\textbackslash
+  right\textbackslash\}}, or \texttt{\textbackslash right]}, the sizes
+are determined by the size of the internal expression as opposed to
+being constant.
+\section{Accents}
+
+Often times we need to modify slightly a character it denote that the
+construct has slightly changed. For example, we want
+\begin{itemize}
+\item not the true parameter $\beta$ but the estimate $\hat{\beta}$,
+\item not the random variable $y$, but the sample mean $\bar{y}$, or
+\item not the singleton $x$, but a vector $\vec{x}$.
+\end{itemize}
+
+A partial list of these accents is below.
+\begin{multicols}{3}
+\begin{itemize}
+\item[$\acute{a}$] \texttt{\textbackslash acute\{a\}}
+\item[$\bar{b}$] \texttt{\textbackslash bar\{b\}}
+\item[$\breve{c}$] \texttt{\textbackslash breve\{c\}}
+\item[$\check{d}$] \texttt{\textbackslash check\{d\}}
+\item[$\dot{e}$] \texttt{\textbackslash dot\{e\}}
+\item[$\ddot{f}$] \texttt{\textbackslash ddot\{f\}}
+\item[$\grave{g}$] \texttt{\textbackslash grave\{g\}}
+\item[$\hat{h}$] \texttt{\textbackslash hat\{h\}}
+\item[$\tilde{\imath}$] \texttt{\textbackslash tilde\{\textbackslash imath\}}
+\item[$\vec{\jmath}$] \texttt{\textbackslash vec\{\textbackslash jmath\}}
+\item[$\widehat{xyz}$] \texttt{\textbackslash widehat\{\textbackslash xyz\}}
+\item[$\widetilde{xyz}$] \texttt{\textbackslash widetilde\{\textbackslash xyz\}}
+
+\end{itemize}
+\end{multicols}
+
+\section{Assignment!}
+
+\subsection*{Questions}
+Write \LaTeX{} code for the following expressions. Confirm that your
+compiled document matches these.
+\begin{enumerate}
+\item
+\[
+\neg\left(\left(T \vee F\right) \wedge F\right) \vee \left( T \right)
+\]
+
+\item 
+\[
+e^{ix} = \cos x + i \sin x
+\]
+
+\item
+\[
+y_i = \beta_0 + \beta_1 x_i + \beta_2 x_i^2 + \epsilon_i
+\]
+
+\item
+\[
+\left(\sum_{x=1}^{\infty} (1/x) \right) - \left(\sum_{x=1}^{\infty}
+  (1/x)^2 \right)
+\]
+\end{enumerate}
+
+\subsection*{Answers}
+
+\begin{enumerate}
+
+\item ~\\
+  \begin{turn}{180}
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+
+\[
+\neg\left(\left(T \vee F\right) 
+\wedge F\right) \vee \left( T \right)
+\]
+
+\end{verbatim}
+    \end{minipage}
+  }
+\end{turn}
+
+\item ~\\
+  \begin{turn}{180}
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+
+\[
+e^{ix} = \cos x + i \sin x
+\]
+
+\end{verbatim}
+    \end{minipage}
+  }
+\end{turn}
+
+\item ~\\
+  \begin{turn}{180}
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+
+\[
+y_i = \beta_0 + \beta_1 x_i + 
+\beta_2 x_i^2 + \epsilon_i
+\]
+
+\end{verbatim}
+    \end{minipage}
+  }
+\end{turn}
+
+\item ~\\
+  \begin{turn}{180}
+  \ovalbox{
+    \begin{minipage}{\linewidth}
+\begin{verbatim}
+
+\[
+\left(\sum_{x=1}^{\infty} (1/x) \right) - 
+\left(\sum_{x=1}^{\infty}
+  (1/x)^2 \right)
+\]
+
+\end{verbatim}
+    \end{minipage}
+  }
+\end{turn}
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
