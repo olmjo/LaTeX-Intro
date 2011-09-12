@@ -1,15 +1,14 @@
-(TeX-add-style-hook "preface"
+(TeX-add-style-hook "full_course"
  (lambda ()
     (TeX-add-symbols
      '("blurb" 1)
      '("myMargin" 1)
      "margin")
     (TeX-run-style-hooks
-     "cclicenses"
-     "pxfonts"
      "listings"
      "hypcap"
      "all"
+     "cclicenses"
      "hyperref"
      "subfigure"
      "fontenc"
@@ -19,11 +18,14 @@
      "lscape"
      "pdflscape"
      "textcomp"
+     "multicol"
+     "rotating"
      "natbib"
      "setspace"
      "fancyhdr"
      "ltablex"
      "fancybox"
+     "staves"
      "enumerate"
      "amsfonts"
      "amsthm"
@@ -33,8 +35,13 @@
      "debugshow"
      "final"
      "latex2e"
-     "art11"
+     "art10"
      "article"
-     "11pt"
-     "letterpaper")))
+     "10pt"
+     "letterpaper"
+     "../1_Introduction/Introduction"
+     "../2_BasicContent/Basic"
+     "../3_FullContent/full"
+     "../4_Math/math"
+     "../5_Misc/misc")))
 

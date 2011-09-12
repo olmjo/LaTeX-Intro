@@ -1,6 +1,5 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.9.7)  26 SEP 2010 16:35
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.6.4)  12 SEP 2011 10:39
 entering extended mode
- restricted \write18 enabled.
  %&-line parsing enabled.
 **\input full_course.tex
 (./full_course.tex (/usr/share/texmf-texlive/tex/latex/base/article.cls
@@ -536,12 +535,7 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
-
-
-LaTeX Warning: Unused global option(s):
-    [10wpt].
-
-(./full_course.aux)
+ (./full_course.aux)
 \openout1 = `full_course.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -558,14 +552,14 @@ LaTeX Font Info:    Checking defaults for U/icelandic/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
- (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+(/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 
-(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count137
 \scratchdimen=\dimen143
@@ -613,7 +607,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 16.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+{/home/olmjo/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write5
 \openout5 = `full_course.toc'.
 
@@ -636,7 +630,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.112 
-       [1] (./1_Introduction/Introduction.tex
+       [1] (../1_Introduction/Introduction.tex
 Underfull \hbox (badness 1077) in paragraph at lines 56--56
 [][]\T1/cmr/m/n/8 This sec-tion is meant to be ac-com-pa-nied by the work-flow 
 di-a-gram avail-able at
@@ -659,7 +653,7 @@ Overfull \hbox (5.35114pt too wide) in paragraph at lines 120--121
 dstudents / jolmsted / teaching /
  []
 
-) [4] (./2_BasicContent/Basic.tex
+) [4] (../2_BasicContent/Basic.tex
 Overfull \hbox (13.465pt too wide) in paragraph at lines 11--24
 [] 
  []
@@ -764,7 +758,7 @@ Overfull \hbox (17.05354pt too wide) in paragraph at lines 276--278
 ng on what L[]T[]X is
  []
 
-) [9] (./3_FullContent/full.tex
+) [9] (../3_FullContent/full.tex
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 36.
 
@@ -834,7 +828,7 @@ Overfull \hbox (8.41983pt too wide) in paragraph at lines 240--242
 e in an en-vi-ron-ment by the name of \T1/cmtt/m/n/10 titlepage 
  []
 
-[14]) [15] (./4_Math/math.tex
+[14]) [15] (../4_Math/math.tex
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 41.
 
@@ -887,7 +881,7 @@ Overfull \hbox (13.465pt too wide) in paragraph at lines 422--438
 [] 
  []
 
-) [22] (./5_Misc/misc.tex
+) [22] (../5_Misc/misc.tex
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 63.
 
@@ -927,19 +921,21 @@ Overfull \hbox (13.465pt too wide) in paragraph at lines 116--117
 
 
 
-pdfTeX warning: pdflatex (file ./5_Misc/Image1.pdf): PDF inclusion: found PDF v
-ersion <1.5>, but at most version <1.4> allowed
-<./5_Misc/Image1.pdf, id=397, 614.295pt x 794.97pt>
-File: ./5_Misc/Image1.pdf Graphic file (type pdf)
- <use ./5_Misc/Image1.pdf>
-<./5_Misc/Image2.png, id=399, 200.75pt x 293.095pt>
-File: ./5_Misc/Image2.png Graphic file (type png)
- <use ./5_Misc/Image2.png>
+pdfTeX warning: pdflatex (file ../5_Misc/Image1.pdf): PDF inclusion: found PDF 
+version <1.5>, but at most version <1.4> allowed
+<../5_Misc/Image1.pdf, id=397, 614.295pt x 794.97pt>
+File: ../5_Misc/Image1.pdf Graphic file (type pdf)
+
+<use ../5_Misc/Image1.pdf>
+<../5_Misc/Image2.png, id=399, 200.75pt x 293.095pt>
+File: ../5_Misc/Image2.png Graphic file (type png)
+
+<use ../5_Misc/Image2.png>
 Rotate: angle 90, sine is 1, cosine is 0
 Rotate: (l,r,h,d)
 Original 0.0pt,216.82513pt,72.2673pt,0.0pt,
 New..... -72.2673pt,0.0pt,216.82513pt,0.0pt
-[25 <./5_Misc/Image1.pdf> <./5_Misc/Image2.png (PNG copy)>]
+[25 <../5_Misc/Image1.pdf> <../5_Misc/Image2.png (PNG copy)>]
 Overfull \hbox (7.25345pt too wide) in paragraph at lines 163--166
 []\T1/cmr/m/n/10 The float en-vi-ron-ment for fig-ures is []\T1/cmtt/m/n/10 \be
 gin{figure}[htpb] \end{figure}\T1/cmr/m/n/10 .
@@ -958,8 +954,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--201
 
  []
 
-File: ./5_Misc/Image2.png Graphic file (type png)
-<use ./5_Misc/Image2.png>
+File: ../5_Misc/Image2.png Graphic file (type png)
+<use ../5_Misc/Image2.png>
 Rotate: angle 120, sine is 0.86601 , cosine is -0.49998 
 Rotate: (l,r,h,d)
 Original 0.0pt,216.82513pt,72.2673pt,0.0pt,
@@ -1000,12 +996,12 @@ Overfull \hbox (28.465pt too wide) in paragraph at lines 340--342
 
 [29]) [30] (./full_course.aux) ) 
 Here is how much of TeX's memory you used:
- 9124 strings out of 493848
- 124182 string characters out of 1152824
- 209057 words of memory out of 3000000
- 12015 multiletter control sequences out of 15000+50000
+ 9123 strings out of 495061
+ 124220 string characters out of 1182622
+ 207975 words of memory out of 3000000
+ 11915 multiletter control sequences out of 15000+50000
  46623 words of font info for 112 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
+ 28 hyphenation exceptions out of 8191
  41i,15n,43p,286b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-s
 uper-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/s
@@ -1048,7 +1044,7 @@ ype1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super
 share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sftt1440.pfb></usr/share/texmf-texlive/fonts/type1/urw/helv
 etic/uhvb8a.pfb>
-Output written on full_course.pdf (32 pages, 905991 bytes).
+Output written on full_course.pdf (32 pages, 905789 bytes).
 PDF statistics:
  621 PDF objects out of 1000 (max. 8388607)
  132 named destinations out of 1000 (max. 500000)
