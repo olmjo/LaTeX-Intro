@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% CLASS %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,letterpaper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[debugshow, final]{graphicx}
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{enumerate}
+\usepackage{staves}
+\usepackage{fancybox}
+\usepackage{ltablex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\usepackage{natbib}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage[table]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{cclicenses}
+\usepackage[all]{hypcap}
+\usepackage{listings}
+% \usepackage{pxfonts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SETTINGS %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+% \lhead{}
+% \chead{}
+% \rhead{}
+% \cfoot{\thepage}
+
+\author{Prepared by Jonathan .P.\ Olmsted}
+
+\title{Just Another Introduction to \LaTeX{}: A (Very) Short Course}
+
+\date{Updated: \today}
+
+\definecolor{mygray}{rgb}{0.95,0.95,0.95}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\small\ttfamily,        % the size of the fonts that are used for the code
+  commentstyle=\scriptsize\color{red},
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=false,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  %% columns=flexible,
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  language=tex,                 % the language of the code
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\texttt,
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  showlines=false,
+  keywordstyle=\color{blue},
+  tabsize=2                       % sets default tabsize to 2 spaces
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% CUSTOM MACROS %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\margin\marginpar
+\newcommand\myMargin[1]{
+  \margin{\singlespace\raggedright\scriptsize
+    \textsf{#1}}
+}
+\renewcommand{\marginpar}[1]{\myMargin{#1}}
+
+\newcommand\blurb[1]{
+  \begin{center}
+    \parbox[h]{.75\linewidth}{
+      \footnotesize \singlespace
+      #1
+    }
+  \end{center}
+}
+
+\newcommand{\tsl}{\textbf{\textsf{the starlab}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{titlepage}
+  \maketitle
+\end{titlepage}
+
+\section*{Introduction to this Short Course}
+
+\paragraph{Purpose.} The aim of this document is to serve as a set of guided
+lessons in creating \LaTeX{} documents and to serve as an example of the kind of
+documents that can be produced with the \LaTeX{} family of tools. It is not and
+does not aim to be comprehensive.
+
+\paragraph{About.} This document was originally prepared by the author during
+his tenure as \tsl{} fellow for the incoming graduate student cohort in the
+Political Science department at the University of Rochester. Previous versions
+of the short course and the corresponding materials are available at \tsl{}'s
+website (\url{http://www.rochester.edu/college/psc/thestarlab/}). This document
+began as an adaptation of Arthur Spirling's version. It's current version may or
+may not have diverged considerably.
+
+In addition to the supplemental files used for the various exercises included in
+this version, all files required to create this document are available at
+\url{https://github.com/olmjo/LaTeX-Intro}.
+
+\paragraph{Rights.}This document is released under the Creative
+Commons Attribution license \by{}.
+
+\paragraph{Comments.}If you have any comments, questions, or concerns regarding
+this document please contact Jonathan Olmsted
+\href{mailto:jpolmsted@gmail.com}{\texttt{jpolmsted@gmail.com}}.
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+\input{chapters/1_Introduction/Introduction.tex}
+
+\clearpage
+\pagebreak
+
+\input{chapters/2_BasicContent/Basic.tex}
+
+\clearpage
+\pagebreak
+
+\input{chapters/3_FullContent/full.tex}
+
+\clearpage
+\pagebreak
+
+\input{chapters/4_Math/math.tex}
+
+\clearpage
+\pagebreak
+
+%% \input{chapters/5_Misc/misc.tex}
+
+\clearpage
+
+
+
+%% \bibliographystyle{}
+%% \bibliography{}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
