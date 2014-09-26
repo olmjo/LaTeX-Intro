@@ -23,22 +23,30 @@
 \usepackage{setspace}
 \usepackage{framed}
 \usepackage[left = 1in, right=1.5in]{geometry}
+\usepackage{titling}
 
 \usepackage{natbib}
 \usepackage{rotating}
 \usepackage{setspace}
 \usepackage{multicol}
-\usepackage{textcomp}
+
 \usepackage{pdflscape}
 \usepackage{lscape}
 \usepackage[table]{xcolor}
+
 \usepackage[T1]{fontenc}
-\usepackage{subfigure}
+%% \usepackage{subfigure}
 \usepackage{hyperref}
 \usepackage{cclicenses}
 \usepackage[all]{hypcap}
 \usepackage{listings}
-% \usepackage{pxfonts}
+\usepackage{titlesec}
+
+\usepackage{stix}
+%%\usepackage{textcomp}
+
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%% SETTINGS %%%%%%%%%%%%%%%
@@ -57,6 +65,20 @@
 \date{Updated: \today}
 
 \definecolor{mygray}{rgb}{0.95,0.95,0.95}
+
+
+\titleformat{\section}{\large\bf\sf\color{purple}}{\thesection\hspace{5pt}$\vert$}{5pt}{}
+
+\pretitle{\begin{center}\huge\bf\sf\color{purple}}
+  \posttitle{\par\end{center}\vspace{1cm}}
+
+\hypersetup{
+  colorlinks=true,       % false: boxed links; true: colored links
+  linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+  citecolor=green,        % color of links to bibliography
+  filecolor=magenta,      % color of file links
+  urlcolor=cyan           % color of external links
+}
 
 \lstset{ %
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
