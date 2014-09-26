@@ -70,7 +70,7 @@ Figure~\ref{fig:workflow}.
   \caption{Example \LaTeX{} Workflow}
   \label{fig:workflow}
   \begin{center}
-    \includegraphics[scale=.5,angle=90]{./Extra_Materials/workflow.pdf}
+    \includegraphics[scale=.5,angle=90]{extra/workflow.pdf}
 
     \blurb{An example workflow using \LaTeX{} to produce the output you care
       about. Blue regions represent the components you will focus on the most on
@@ -143,7 +143,7 @@ you can and should ignore this fact in the beginning of your \LaTeX{}
 experience. What is important is to realize the following:
 \[
 \textrm{\LaTeX{}} \neq \textrm{a text editor} \neq \textrm{a package manager
-  like MikTeX}.
+  (e.g., MikTeX)}.
 \]
 
 \paragraph{Step 5} Once you have a PDF file, you can view it in your preferred
@@ -170,12 +170,28 @@ easy, too.
 
 The contents of this file are as follows:
 
-\lstinputlisting{Extra_Materials/FakeFile.tex}
+\lstinputlisting[caption=\texttt{FakeFile.tex}]{extra/FakeFile.tex}
+
+The resultant PDF file should look like Figure~\ref{fig:output}.
+
+\begin{figure}
+  \caption{\texttt{FakeFile.pdf} Output} \label{fig:output}
+  \begin{center}
+    \fbox{
+      \includegraphics[scale=.5]{extra/FakeFile}
+    }
+
+    \blurb{This figure shows the PDF output created by the input \LaTeX{} file
+      \texttt{FakeFile.tex}.
+    }
+
+  \end{center}
+\end{figure}
+
 
 You have successfully created your first \LaTeX{} document and
 simultaneously learned to always keep \LaTeX{} files/projects in
-separate directories because the output will create clutter. Consider
-this a windfall!
+separate directories because the output will create clutter.
 
 
 %%% Local Variables:

@@ -21,6 +21,8 @@
 \usepackage{ltablex}
 \usepackage{fancyhdr}
 \usepackage{setspace}
+\usepackage{framed}
+\usepackage[left = 1in, right=1.5in]{geometry}
 
 \usepackage{natbib}
 \usepackage{rotating}
@@ -48,7 +50,7 @@
 % \rhead{}
 % \cfoot{\thepage}
 
-\author{Prepared by Jonathan .P.\ Olmsted}
+\author{Prepared by Jonathan P.\ Olmsted}
 
 \title{Just Another Introduction to \LaTeX{}: A (Very) Short Course}
 
@@ -58,14 +60,14 @@
 
 \lstset{ %
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-  basicstyle=\small\ttfamily,        % the size of the fonts that are used for the code
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
   commentstyle=\scriptsize\color{red},
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=false,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,                    % adds a frame around the code
-  %% columns=flexible,
+  columns=fullflexible,
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   language=tex,                 % the language of the code
   numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
@@ -76,7 +78,7 @@
   showtabs=false,                  % show tabs within strings adding particular underscores
   stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
   showlines=false,
-  keywordstyle=\color{blue},
+  %%keywordstyle=\color{blue},
   tabsize=2                       % sets default tabsize to 2 spaces
 }
 
@@ -146,12 +148,12 @@ this document please contact Jonathan Olmsted
 
 \pagebreak
 
-\input{chapters/1_Introduction/Introduction.tex}
+\input{chapters/01_intro/intro.tex}
 
 \clearpage
 \pagebreak
 
-\input{chapters/2_BasicContent/Basic.tex}
+\input{chapters/02_basic/basic.tex}
 
 \clearpage
 \pagebreak
