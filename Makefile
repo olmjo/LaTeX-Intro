@@ -1,6 +1,6 @@
 ## Inputs
 
-MISC_TEX := ./extra/FakeFile.tex ./chapters/02_basic/fakefile2.tex
+MISC_TEX := ./extra/FakeFile.tex ./chapters/02_basic/fakefile2.tex ./chapters/03_full/fakefile3.tex ./chapters/03_full/fakefile4.tex
 MAIN_TEX := tutorial.tex
 
 ## Implied Files Lists
