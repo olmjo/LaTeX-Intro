@@ -1,20 +1,60 @@
 \documentclass{article}
 
+\usepackage{fancyhdr}
+
 % This is just a comment.
+
+\title{My First Opus}
+\date{\today}
+\author{Woodrow Wilson\thanks{The author thanks
+    Prospect House or having a sufficiently pretty garden.}
+}
+
+\pagestyle{fancy}
+\rfoot{Virgina}
+
 \begin{document}
+
+\begin{titlepage}
+  \maketitle
+
+  \begin{abstract}
+    The tutorial has covered basic \LaTeX{} commands useful for creating full
+    documents. There is clearly a learning curve in learning LaTeX{}, but the
+    output sure is pretty.
+  \end{abstract}
+\end{titlepage}
 
 \section{The Content}
 
 \subsection{Short Content}
 
-\input{./loremipsum_short.txt}
+\textbf{If I had a boat, \textit{I’d go out on the ocean}}.
+
+\begin{textsf}
+  \input{./loremipsum-short.txt}
+\end{textsf}
 
 \subsection{Long Content}
 
-\input{./loremipsum.txt}
+\begin{tiny}
+  \input{./loremipsum.txt}
+\end{tiny}
 
 \appendix
 
 \section{Some Book-keeping}
+
+\begin{itemize}
+\item Where the Sidewalk Ends -- Shel Silverstein
+\item The Philosophy Gym -- Stephen Law
+\end{itemize}
+
+\begin{description}
+\item[Where the Sidewalk Ends] Shel Silverstein
+\item[The Philosophy Gym] Stephen Law
+\end{description}
+
+
 
 \end{document}

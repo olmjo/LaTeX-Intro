@@ -23,7 +23,7 @@
 
 \item Now, download the two dummy text files from
   \url{https://github.com/olmjo/LaTeX-Intro/tree/master/extra}. They are named
-  \verb=loremipsum_short.txt= and \verb=loremipsum.txt=.
+  \verb=loremipsum-short.txt= and \verb=loremipsum.txt=.
 
 \item Place these two files in the same folder/directory as your new \LaTeX{}
   file.
@@ -32,7 +32,7 @@
   following way:
   \begin{itemize}
 
-  \item Add \texttt{\textbackslash input\{./loremipsum\_short.txt\}}
+  \item Add \texttt{\textbackslash input\{./loremipsum-short.txt\}}
     on a new line directly after \texttt{\textbackslash section\{Short
       Content\}}.
 
@@ -41,7 +41,7 @@
     \begin{lstlisting}
 \section{Short Content}
 
-\input{loremipsum_short}
+\input{loremipsum-short}
      \end{lstlisting}
 
 
@@ -108,7 +108,7 @@ The basic and most common changes are here:
 \section{Short Content}
 
 \begin{textsf}
-  \input{loremipsum_short}
+  \input{loremipsum-short}
 \end{textsf}
   \end{lstlisting}
 
@@ -120,7 +120,7 @@ The basic and most common changes are here:
 
 If I had a boat, I'd go out on the ocean.
 \begin{textsf}
-  \input{loremipsum_short}
+  \input{loremipsum-short}
 \end{textsf}
   \end{lstlisting}
 
@@ -454,6 +454,21 @@ There are three main list environments that you will likely use:
   We can change this by including \verb=\thispagestyle{fancy}= immediately after
   \verb=\maketitle=.
 \end{itemize}
+
+\section{Putting it Together}
+
+\lstinputlisting{./chapters/03_full/fakefile4.tex}
+
+\begin{figure}[h]
+  \centering
+  \fbox{
+    \includegraphics[scale=.4,page=2,angle=90]{./chapters/03_full/fakefile4}
+  }
+  \fbox{
+    \includegraphics[scale=.4,page=1,angle=90]{./chapters/03_full/fakefile4}
+  }
+  \caption{First Two Pages of a Full Document}
+\end{figure}
 
 
 %%% Local Variables:
