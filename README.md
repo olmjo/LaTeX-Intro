@@ -5,7 +5,7 @@ directory.
 
 This directory contains all source components for *Just Another Introduction to
 LaTeX: A (Very) Short Course*. More information is available in
-[tutorial.pdf]([tutorial.pdf)
+[tutorial.pdf](tutorial.pdf)
 
 It was created using LaTeX.
 
