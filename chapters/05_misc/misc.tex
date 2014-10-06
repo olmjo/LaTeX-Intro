@@ -4,81 +4,40 @@
 \begin{itemize}
 \item We can create tabular content in a \LaTeX{} document either within
   a float environment or not. We will describe what a float is in a moment.
-  
+
 \item Either way, tabular content like the following is created with
   the \texttt{tabular} environment.
 
-  \begin{center}
-    \begin{tabular}{c c c} 
-      \hline 
-      \hline
-      Student & Alma Mater & Favorite Color \\
-      \hline
-      Tyson Chatagnier & Texas A\&M & Denim \\
-      Jonathan Klingler & Notre Dame & Green \\
-      Gary Hollibaugh & UCSD & Orange and Aquamarine \\
-      Jonathan Olmsted & UDel & French Blue \\
-      Peter Haschke & UNC-Asheville & Titian Red \\
-      Lukas Pfaff & Iowa State University & Cornflower blue\footnote{This is not necessarily true, it is, however, just a corn joke!'}\\
-      \hline
-      \hline
-    \end{tabular}
-  \end{center}
+\input{./chapters/05_misc/table}
 
-\item The \texttt{tabular} environment takes a mandatory argument that
-  is enclosed in curly braces. In the case of the above table where
-  each column is center justified, we'd use
-  \verb! \begin{tabular}{c c c} \end{tabular}!. If we wanted the
-  columns to be right-justified or left-justified we could use
-  \texttt{r} or \texttt{l}.
-  \item If we wanted to add a vertical line on either the left or right or in-between two columns we'd use the  argument \verb!{| c | c | c |}!.
-  \item Horizontal lines are given by \verb!\hline!.
-  \item Tab breaks are caused by \verb!&! and line breaks by \verb!\\!.
-  \item The full code for the above table is:\\
-    \ovalbox{
-      \begin{minipage}{\linewidth}
-\begin{verbatim}
+\item The \texttt{tabular} environment takes a mandatory argument that is
+  enclosed in curly braces. In the case of the above table where each column is
+  center justified, we'd use \verb! \begin{tabular}{c c c} \end{tabular}!. If we
+  wanted the columns to be right-justified or left-justified we could use
+  \texttt{r} or \texttt{l} in place of the three \verb=c='s.
 
-  \begin{center}
-    \begin{tabular}{c c c} 
-      \hline 
-      \hline
-      Student & Alma Mater & Favorite Color \\
-      \hline
-      Tyson Chatagnier & Texas A\&M & Denim \\
-      Jonathan Klingler & Notre Dame & Green \\
-      Gary Hollibaugh & UCSD & Orange and Aquamarine \\
-      Jonathan Olmsted & UDel & French Blue \\
-      Peter Haschke & UNC-Asheville & Titian Red \\
-      Lukas Pfaff & Iowa State University & Cornflower blue
-      \footnote{This is not necessarily true, it is, 
-        however, just a corn joke!'}\\
-      \hline
-      \hline
-    \end{tabular}
-  \end{center}
+\item If we wanted to add a vertical line on either the left or right or in-between two columns we'd use the  argument \verb!{| c | c | c |}!.
 
-\end{verbatim}
-    \end{minipage}
-  }
+\item Horizontal lines are given by \verb!\hline!.
 
-\item The line breaks and whitespace in the above code are poorly
-  selected, but this results from the need to fit the code in such a
-  small block. Usually, the code for \LaTeX{} tables can be several
-  times wider than anything else in your \LaTeX{} document.
+\item Tab breaks are caused by \verb!&! and line breaks by \verb!\\!.
 
-\item There are much more complex environments than 
-  \texttt{tabular} that you will have to use once your 
-  tabular content grows. They are similar, but have 
-  their own documentation to help you through. 
-  \end{itemize}
-  
+\item The full code for the above table is:\\
+  \lstinputlisting{./chapters/05_misc/table.tex}
+
+\item There are much more complex environments than \texttt{tabular} that you
+  will have to use once your tabular content grows. They are similar, but have
+  their own documentation to help you through.
+
+\end{itemize}
+
 \section{Pictures}
+
 \begin{itemize}
-\item \LaTeX{} has the ability to draw arbitrary types of objects and
-  schematics within a \LaTeX{} document in a native language. However,
-  this is seldom used and probably less advantageous than including
-  external files.
+
+\item \LaTeX{} has the ability to draw arbitrary types of objects and schematics
+  within a \LaTeX{} document in a native language. However, this is sometimes
+  overkill. If necessary, you can learn about this later.
 
 \item Download \texttt{Image1.pdf} and \texttt{Image2.png} from
   \url{www.rochester.edu/college/gradstudents/jolmsted/}
@@ -93,7 +52,7 @@
 \item The \verb!scale! optional argument is useful to change
   dimensions on the fly without distorting the aspect ratio.
 \item Try the following code in a \LaTeX{} document environment:
-  
+
   \ovalbox{
     \begin{minipage}{\linewidth}
 \begin{verbatim}
@@ -101,12 +60,12 @@
   \begin{center}
     \fbox{
       \fbox{
-        \includegraphics[scale=.25]{./Image1}
+        \includegraphics[scale=.25]{./extra/Image1}
       }
       \fbox{
-        \includegraphics[width=3in, 
-        height=1in, 
-        angle=90]{./Image2}
+        \includegraphics[width=3in,
+        height=1in,
+        angle=90]{./extra/Image2}
       }
     }
   \end{center}
@@ -115,16 +74,16 @@
     \end{minipage}
   }
 
-\item The result is something like 
+\item The result is something like
   \begin{center}
     \fbox{
       \fbox{
-        \includegraphics[scale=.25]{../5_Misc/Image1}
+        \includegraphics[scale=.25]{./extra/Image1}
       }
       \fbox{
-        \includegraphics[width=3in, 
-        height=1in, 
-        angle=90]{../5_Misc/Image2}
+        \includegraphics[width=3in,
+        height=1in,
+        angle=90]{./extra/Image2}
       }
     }
   \end{center}
@@ -133,7 +92,7 @@
   the order in which the \texttt{angle} and then
   \texttt{height}/\texttt{width} arguments are applied. What does
   \verb!\fbox{}! do?
-    
+
 
 \end{itemize}
 
@@ -182,8 +141,8 @@
 \begin{figure}
   \begin{center}
     \fbox{
-      \includegraphics[width=3in, 
-      height=1in, 
+      \includegraphics[width=3in,
+      height=1in,
       angle=120]{./Image2}
     }
     \caption{A Hero of a Man} \label{f:Riker}
@@ -193,18 +152,16 @@
     \end{minipage}
   }
 
-\item Now, see Figure \ref{f:Riker} on page \pageref{f:Riker} to view
-  the output. We were able to reference the figure number
-  automatically using \verb!\ref{f:Riker}! which matches our
-  \verb!\label!. We reference the page number automatically with \verb!\pageref{}!.
+\item Now, see Figure \ref{f:Riker} on page \pageref{f:Riker} to view the
+  output. We were able to reference the figure number automatically using
+  \verb!\ref{f:Riker}! which matches our \verb!\label!. We reference the page
+  number automatically with \verb!\pageref{}!.
   \\
 
 \begin{figure}
   \begin{center}
     \fbox{
-      \includegraphics[width=3in, 
-      height=1in, 
-      angle=120]{../5_Misc/Image2}
+      \includegraphics[width=3in,height=1in,angle=120]{./extra/Image2}
     }
     \caption{A Hero of a Man} \label{f:Riker}
   \end{center}
@@ -213,7 +170,7 @@
 \end{itemize}
 
 \section*{More Math Environments}
-\begin{itemize} 
+\begin{itemize}
 \item There are a number of math environments that become useful when
   one is typesetting mathematical notation beyond very basic
   experessions.
@@ -232,7 +189,7 @@ second.
 \subsection*{Equation}
 The equation environment is a very common way to typeset equations
 when reference numbers are being used. So, for example,
-\verb!\begin{equation} 4=x^2 \end{equation}! gives 
+\verb!\begin{equation} 4=x^2 \end{equation}! gives
 \begin{equation}
   4=x^2.
 \end{equation}
@@ -240,7 +197,7 @@ Now, it is not necessary to place the equation environment in a math
 mode. In this sense, the math mode is implied. There is also a variant
 such that \verb!\begin{equation*} 4=x^2 \end{equation*}! suppresses
 the equation numbering,
-\begin{equation*} 
+\begin{equation*}
   4=x^2.
 \end{equation*}
 Equation numbers can be labeled and referenced as was done in the
@@ -261,7 +218,7 @@ include alignment stops. There is a un-numbered version,
    \sum_{x=1}^{4} \frac{1}{x} &
    &= \frac{1}{1} + \frac{1}{2}  + \frac{1}{3} + \frac{1}{4} & \\
    &= \frac{25}{12} &\\
-   & &>2   
+   & &>2
 \end{align}
 \end{verbatim}
     \end{minipage}
@@ -271,7 +228,7 @@ produces a three line \texttt{align} environment.
    \sum_{x=1}^{4} \frac{1}{x}
    &= \frac{1}{1} + \frac{1}{2}  + \frac{1}{3} + \frac{1}{4} \\
    &= \frac{25}{12} \\
-   &>2   
+   &>2
 \end{align}
 Notice that the numbering is cumulative. The use of \verb!\label{}!
 and \verb!ref{}! works identically here.
@@ -293,7 +250,7 @@ from \\
 \begin{verbatim}
 \[
  \left[
-\begin{array}{cc} 
+\begin{array}{cc}
   1 & 0 \\
   0 & 1
 \end{array}
@@ -314,10 +271,10 @@ narrow in application. Although it is designed to be used only to
 represent piece-wise functions, it is a marked improvement over the
 alternative which would be to ``hack'' the \texttt{array}
 environment. Like the \texttt{array} environment, though,
-\texttt{cases} must be used within math mode. So, 
+\texttt{cases} must be used within math mode. So,
 
 \[
-\mathbf{1}_{\mathcal{X}}(x) = 
+\mathbf{1}_{\mathcal{X}}(x) =
 \begin{cases}
   1, & x \in \mathcal{X} \\
   0, & \textrm{otherwise}
@@ -329,7 +286,7 @@ is the result of the code
     \begin{minipage}{\linewidth}
 \begin{verbatim}
 \[
-\mathbf{1}_{\mathcal{X}}(x) = 
+\mathbf{1}_{\mathcal{X}}(x) =
 \begin{cases}
   1, & x \in \mathcal{X} \\
   0, & \textrm{otherwise}
@@ -366,10 +323,8 @@ is the result of the code
       generous a way, use it as an organizational tool.
 \end{itemize}
 
-% \end{document}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../tutorial"
+%%% End:
